@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 app.post('/api/v1/quiz', function (req, res) {
     const answer = req.body.answer;
+    console.log(answer);
     if(answer === "2"){
         // res.send("<h1>正解！</h1>");
         res.redirect("/correct.html");

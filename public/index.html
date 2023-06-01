@@ -5,11 +5,45 @@
         <script src="js/app.js"></script>
     </head>
     <body>
-        <h1>クイズ：1＋1は？</h1>
-        <form action="/api/v1/quiz" method="POST">
-            <input type="text" name="answer"  placeholder="答えを入力" />
-            <button type="submit">送信！</button>
-        </form>
+        <h1>給餌扉開閉指示</h1>
+            <form action="/api/v1/quiz" method="POST">
+                <input type="text" name="answer"  placeholder="開閉指示を数字で入力（0−15）" />
+                <button type="submit">送信！</button>
+            </form>
+            <div>
+                <form action="/api/v1/quiz" method="POST">
+                    <input type="range" id="aperture" name="apreture"
+                           min="0" max="15" value="0" step="1">
+                    <label for="aperture">apeture</label>
+                    <output name="result" for="aperture">0</output>
+                </form>
+            </div>    
+   
+            <form action="/api/v1/quiz" method="POST">
+                <table>
+                    <button type="submit" name="answer" value=0>全開</button>
+                    <button type="submit" name="answer" value="15">全閉</button>
+                </table>
+    
+                <table>
+                    <button type="submit" name="answer" value="0">0</button>
+                    <button type="submit" name="answer" value="1">1</button>
+                    <button type="submit" name="answer" value="2">2</button>
+                    <button type="submit" name="answer" value="3">3</button>
+                    <button type="submit" name="answer" value="4">4</button>
+                    <button type="submit" name="answer" value="5">5</button>
+                   <button type="submit" name="answer" value="6">6</button>
+                    <button type="submit" name="answer" value="7">7</button>
+                    <button type="submit" name="answer" value="8">8</button>
+                    <button type="submit" name="answer" value="9">9</button>
+                    <button type="submit" name="answer" value="10">10</button>
+                    <button type="submit" name="answer" value="11">11</button>
+                    <button type="submit" name="answer" value="12">12</button>
+                    <button type="submit" name="answer" value="13">13</button>
+                    <button type="submit" name="answer" value="14">14</button>
+                    <button type="submit" name="answer" value="15">15</button>
+                </table>
+            </form>
     </body>
 
 </html>
